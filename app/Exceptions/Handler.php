@@ -46,6 +46,18 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof \Spatie\Permission\Exceptions\PermissionAlreadyExists) {
+            $permission_name = (explode("`", $exception->getMessage()))[1];
+
+            return response()->json(['errors' => ['name' => "A Permission `{$permission_name}` is already exists."]], 422);
+        }
+
+        if ($exception instanceof \Spatie\Permission\Exceptions\RoleAlreadyExists) {
+            $permission_name = (explode("`", $exception->getMessage()))[1];
+
+            return response()->json(['errors' => ['name' => "A Role `{$permission_name}` is already exists."]], 422);
+        }
+
         return parent::render($request, $exception);
     }
 }
