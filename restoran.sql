@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2019 at 09:59 AM
+-- Generation Time: Jun 20, 2019 at 03:52 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `restoran_2`
+-- Database: `restoran`
 --
 
 -- --------------------------------------------------------
@@ -73,7 +73,17 @@ INSERT INTO `audits` (`id`, `user_type`, `user_id`, `event`, `auditable_type`, `
 (26, 'App\\User', 1, 'created', 'App\\Order', 3, '[]', '{\"no_meja\":\"7\",\"user_id\":1,\"id\":3}', 'http://localhost:8000/order?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36', NULL, '2019-06-19 19:10:16', '2019-06-19 19:10:16'),
 (27, 'App\\User', 1, 'created', 'App\\detOrder', 5, '[]', '{\"order_id\":3,\"masakan_id\":4,\"keterangan\":null,\"jumlah\":\"1\",\"id\":5}', 'http://localhost:8000/order?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36', NULL, '2019-06-19 19:10:17', '2019-06-19 19:10:17'),
 (28, 'App\\User', 1, 'created', 'App\\Transaksi', 3, '[]', '{\"user_id\":1,\"order_id\":\"3\",\"total_bayar\":\"7500\",\"id\":3}', 'http://localhost:8000/transaksi?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 00:49:05', '2019-06-20 00:49:05'),
-(29, 'App\\User', 1, 'updated', 'App\\Order', 3, '{\"status_order\":0}', '{\"status_order\":1}', 'http://localhost:8000/transaksi?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 00:49:05', '2019-06-20 00:49:05');
+(29, 'App\\User', 1, 'updated', 'App\\Order', 3, '{\"status_order\":0}', '{\"status_order\":1}', 'http://localhost:8000/transaksi?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 00:49:05', '2019-06-20 00:49:05'),
+(30, 'App\\User', 1, 'updated', 'App\\Masakan', 1, '{\"image\":\"img\\/masakans\\/NDPlfz6fNXfrVAznQl4UZ2Wbs60yndgqmln69JUi.jpeg\"}', '{\"image\":\"img\\/masakans\\/pIMA9EYxkUHTgN2pIicOGCmJyrOtnyeJgWV5NkQ2.jpeg\"}', 'http://localhost:8000/masakan/1?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:45:58', '2019-06-20 06:45:58'),
+(31, 'App\\User', 1, 'updated', 'App\\Masakan', 2, '{\"image\":\"img\\/masakans\\/F0wocxqoGULmknIeFdGGJVTc4g5VrXJ7lNwJI93K.jpeg\"}', '{\"image\":\"img\\/masakans\\/SbS30ZFfFSleVxcwuS8dYHhYIzRETmosW1xVrxYb.jpeg\"}', 'http://localhost:8000/masakan/2?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:46:07', '2019-06-20 06:46:07'),
+(32, 'App\\User', 1, 'created', 'App\\Permission', 35, '[]', '{\"name\":\"kn\",\"guard_name\":\"web\",\"id\":35}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:49:09', '2019-06-20 06:49:09'),
+(33, 'App\\User', 1, 'deleted', 'App\\Permission', 35, '{\"id\":35,\"name\":\"kn\",\"guard_name\":\"web\"}', '[]', 'http://localhost:8000/user_management/permission/35?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:49:18', '2019-06-20 06:49:18'),
+(34, 'App\\User', 1, 'created', 'App\\Permission', 36, '[]', '{\"name\":\"masakan-import\",\"guard_name\":\"web\",\"id\":36}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:50:15', '2019-06-20 06:50:15'),
+(35, 'App\\User', 1, 'created', 'App\\Permission', 37, '[]', '{\"name\":\"user-import\",\"guard_name\":\"web\",\"id\":37}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:50:27', '2019-06-20 06:50:27'),
+(36, 'App\\User', 1, 'created', 'App\\Permission', 38, '[]', '{\"name\":\"permission-import\",\"guard_name\":\"web\",\"id\":38}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:50:40', '2019-06-20 06:50:40'),
+(37, 'App\\User', 1, 'created', 'App\\Permission', 39, '[]', '{\"name\":\"role-import\",\"guard_name\":\"web\",\"id\":39}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:50:45', '2019-06-20 06:50:45'),
+(38, 'App\\User', 1, 'created', 'App\\Permission', 40, '[]', '{\"name\":\"order-import\",\"guard_name\":\"web\",\"id\":40}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:51:01', '2019-06-20 06:51:01'),
+(39, 'App\\User', 1, 'created', 'App\\Permission', 41, '[]', '{\"name\":\"transaksi-import\",\"guard_name\":\"web\",\"id\":41}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:51:07', '2019-06-20 06:51:07');
 
 -- --------------------------------------------------------
 
@@ -126,8 +136,8 @@ CREATE TABLE `masakans` (
 --
 
 INSERT INTO `masakans` (`id`, `image`, `nama_masakan`, `deskripsi`, `kategori`, `harga`, `status_masakan`, `created_at`, `updated_at`) VALUES
-(1, 'img/masakans/NDPlfz6fNXfrVAznQl4UZ2Wbs60yndgqmln69JUi.jpeg', 'Gurame Saus Asam Manis', 'Gurame yang dibuat dengan cinta..', 'makanan', 95000, 1, '2019-06-19 07:39:19', '2019-06-18 16:43:36'),
-(2, 'img/masakans/F0wocxqoGULmknIeFdGGJVTc4g5VrXJ7lNwJI93K.jpeg', 'Cumi Saus Tiram', 'Cumi dari laut', 'makanan', 35000, 1, '2019-06-19 07:41:04', '2019-06-18 16:46:33'),
+(1, 'img/masakans/pIMA9EYxkUHTgN2pIicOGCmJyrOtnyeJgWV5NkQ2.jpeg', 'Gurame Saus Asam Manis', 'Gurame yang dibuat dengan cinta..', 'makanan', 95000, 1, '2019-06-19 07:39:19', '2019-06-20 06:45:58'),
+(2, 'img/masakans/SbS30ZFfFSleVxcwuS8dYHhYIzRETmosW1xVrxYb.jpeg', 'Cumi Saus Tiram', 'Cumi dari laut', 'makanan', 35000, 1, '2019-06-19 07:41:04', '2019-06-20 06:46:07'),
 (3, 'img/masakans/d0DPzX7pdwSO0LDzmOrlNNUcRBlVcDdVkb1c8Ce7.jpeg', 'Es Kelapa Muda', 'Es Kelapa Muda Dingin', 'minuman', 5000, 1, '2019-06-19 07:42:05', '2019-06-19 07:42:05'),
 (4, 'img/masakans/bQQSIXlWXc4CIdd2CN9EnUz49SiHjfIzP7LGG7Q0.jpeg', 'Es Kelapa Jeruk', 'Es Kelapa Jeruk Dengan kelapa muda', 'minuman', 7500, 1, '2019-06-19 07:43:46', '2019-06-18 17:41:57'),
 (5, 'img/masakans/gGZGCmpYcSdyceGjB90NeeolEA9YiiFxXTUhhWRh.jpeg', 'Ayam Goreng', '3 pcs ayam goreng', 'makanan', 4000, 1, '2019-06-19 07:44:40', '2019-06-19 07:44:40'),
@@ -283,7 +293,13 @@ INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at
 (31, 'transaksi-delete', 'web', '2019-06-18 15:37:10', '2019-06-18 15:37:10'),
 (32, 'transaksi-export', 'web', '2019-06-18 15:37:16', '2019-06-18 15:37:16'),
 (33, 'transaksi-view', 'web', '2019-06-18 15:37:33', '2019-06-18 15:37:33'),
-(34, 'order-export', 'web', '2019-06-18 15:45:29', '2019-06-18 15:45:29');
+(34, 'order-export', 'web', '2019-06-18 15:45:29', '2019-06-18 15:45:29'),
+(36, 'masakan-import', 'web', '2019-06-20 06:50:15', '2019-06-20 06:50:15'),
+(37, 'user-import', 'web', '2019-06-20 06:50:27', '2019-06-20 06:50:27'),
+(38, 'permission-import', 'web', '2019-06-20 06:50:40', '2019-06-20 06:50:40'),
+(39, 'role-import', 'web', '2019-06-20 06:50:45', '2019-06-20 06:50:45'),
+(40, 'order-import', 'web', '2019-06-20 06:51:01', '2019-06-20 06:51:01'),
+(41, 'transaksi-import', 'web', '2019-06-20 06:51:07', '2019-06-20 06:51:07');
 
 -- --------------------------------------------------------
 
@@ -405,7 +421,13 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (34, 1),
 (34, 2),
 (34, 3),
-(34, 4);
+(34, 4),
+(36, 1),
+(37, 1),
+(38, 1),
+(39, 1),
+(40, 1),
+(41, 1);
 
 -- --------------------------------------------------------
 
@@ -558,7 +580,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `audits`
 --
 ALTER TABLE `audits`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `detail_orders`
@@ -588,7 +610,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `roles`
