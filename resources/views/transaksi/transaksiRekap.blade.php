@@ -44,7 +44,7 @@
                                 <th>#</th>
                                 <th>Order ID</th>
                                 <th>User ID</th>
-                                <th>Nama User</th>
+                                <th>User Name</th>
                                 <th>Total Bayar</th>
                                 <th>Tanggal</th>
                             </tr>

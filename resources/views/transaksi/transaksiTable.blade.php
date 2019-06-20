@@ -91,7 +91,7 @@
                             <div class="input-group-addon">
                                 RP
                             </div>
-                            <input type="number" id="uang_masuk" class="form-control" data-uang="" placeholder="Uang Masuk..">
+                            <input type="text" id="uang_masuk" class="form-control" data-uang="" placeholder="Uang Masuk..">
                         </div>
                     </div>
 
@@ -102,7 +102,7 @@
                             <div class="input-group-addon">
                                 RP
                             </div>
-                            <input type="number" id="kembalian" class="form-control" placeholder="Kembalian..">
+                            <input type="number" id="kembalian" class="form-control" placeholder="Kembalian.." disabled>
                         </div>
                     </div>
 
@@ -125,8 +125,6 @@
 
 @push('js')
 <script>
-    $('#uang_masuk').val('2500000');
-
     $('#uang_masuk').on('keyup', function(e){
         const hartot = $('#total_bayar').val();
         let uang_masuk = $(this).val();
