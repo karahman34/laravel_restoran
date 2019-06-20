@@ -48,10 +48,16 @@
         <div class="col-md-12">
             <div class="box box-danger">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Masakan</h3>
-                    @can('role-add')
-                        <a href="{{ route('role.create') }}" class="btn btn-primary btn-show pull-right" data-toggle="tooltip" data-placement="left" title="Tambah Role" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
-                    @endcan
+                    <h3 class="box-title">Role</h3>
+                    <span class="pull-right">
+                        @can('role-import')
+                            <a href="{{ route('role.show_import') }}" class="btn btn-primary btn-show" data-title="Import Roles"><i class="fa fa-plus"> Import</i></a>
+                        @endcan
+
+                        @can('role-add')
+                            <a href="{{ route('role.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Tambah Role" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
+                        @endcan
+                    </span>
                 </div>
                 <div class="box-body">
                     @if (session()->has('success'))

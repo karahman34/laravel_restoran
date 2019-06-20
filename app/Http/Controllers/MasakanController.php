@@ -7,18 +7,23 @@ use App\detOrder;
 use App\Http\Requests\MasakanRequest;
 use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
-use Illuminate\Support\Facades\DB;
 use App\Audit;
+use App\Imports\MasakanImport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\MasakanExport;
+use Illuminate\Http\Request;
 
 class MasakanController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('permission:user-view')->only('index', 'getAll');
-        $this->middleware('permission:user-add')->only('create', 'store');
-        $this->middleware('permission:user-edit')->only('edit', 'update');
-        $this->middleware('permission:user-delete')->only('destroy');
+        $this->middleware('permission:masakan-view')->only('index', 'getAll');
+        $this->middleware('permission:masakan-add')->only('create', 'store');
+        $this->middleware('permission:masakan-edit')->only('edit', 'update');
+        $this->middleware('permission:masakan-delete')->only('destroy');
+        $this->middleware('permission:masakan-export')->only('export');
+        $this->middleware('permission:masakan-import')->only('show_import', 'store_import');
     }
 
     /**
@@ -124,19 +129,18 @@ class MasakanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Masakan  $masakan
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Masakan $masakan)
     {
-        $model = Masakan::find($id);
-        $path = public_path('img/masakan'.$model->image);
-
-        if(unlink($path)){
-            if($model->delete()){
+        if(Storage::disk('public')->delete($masakan->image)){
+            if($masakan->delete()){
                 return "Masakan berhasil didelete.";
             }
         }
+
+        return "Masakan gagal didelete.";
     }
 
     public function search($key = null)
@@ -214,5 +218,45 @@ class MasakanController extends Controller
         return DataTables::of($models)
                             ->addIndexColumn()
                             ->make(true);
+    }
+
+    public function export(Request $request)
+    {
+        $type = $request->get('ext');
+        if($request->has('ext') &&  $type != ""){
+            $allowed_type = [
+                'xlsx', 'csv', 'html'
+            ];
+
+            if(in_array($type, $allowed_type)) {
+                return Excel::download(new MasakanExport, 'masakan.'.$type);
+            } else {
+                return response()->json('error', 422);
+            }
+        }
+
+        return Excel::download(new MasakanExport, 'masakan.xlsx');
+    }
+
+    public function show_import()
+    {
+        $url = route('masakan.store_import');
+
+        return view('import_excel', compact('url'));
+    }
+
+    public function store_import(Request $request)
+    {
+        $request->validate([
+            'excel' => 'required|mimes:xls,xlsx'
+        ]);
+
+        $excel = Excel::import(new MasakanImport, $request->file('excel')->getRealPath());
+
+        if($excel){
+            return 'Masakan successfully imported.';
+        }
+
+        return "Cant't import Masakan,try again later..";
     }
 }

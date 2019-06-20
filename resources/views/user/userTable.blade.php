@@ -10,23 +10,23 @@
             dom: "lBfrtip",
             buttons: canExport('user', [
                 {
-                    extend: "pdfHtml5",
-                    exportOptions: {
-                        columns: [0,2,3,4],
+                    text: 'HTML',
+                    action: function ( e, dt, button, config ) {
+                        window.location = "{{ route('user.export') }}?ext=html";
                     }
                 },
                 {
-                    extend: "excelHtml5",
-                    exportOptions: {
-                        columns: [0,2,3,4],
+                    text: 'Excel',
+                    action: function ( e, dt, button, config ) {
+                        window.location = "{{ route('user.export') }}";
                     }
                 },
                 {
-                    extend: "print",
-                    exportOptions: {
-                        columns: [0,2,3,4],
+                    text: 'CSV',
+                    action: function ( e, dt, button, config ) {
+                        window.location = "{{ route('user.export') }}?ext=csv";
                     }
-                }
+                },
             ]),
             responsive: true,
             processing: true,
@@ -50,9 +50,15 @@
             <div class="box box-danger">
                 <div class="box-header with-border">
                     <h3 class="box-title">User</h3>
-                    @can('user-add')
-                        <a href="{{ route('user.create') }}" class="btn btn-primary btn-show pull-right" data-toggle="tooltip" data-placement="left" title="Tambah User" data-title="Tambah User">Tambah</a>
-                    @endcan
+                    <span class="pull-right">
+                        @can('user-import')
+                            <a href="{{ route('user.show_import') }}" class="btn btn-primary btn-show" data-title="Import User"><i class="fa fa-plus"> Import</i></a>
+                        @endcan
+
+                        @can('user-add')
+                            <a href="{{ route('user.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Tambah User" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
+                        @endcan
+                    </span>
                 </div>
                 <div class="box-body">
                     <table class="table table-responsive table-hover table-bordered table-striped" id="datatable">

@@ -10,22 +10,22 @@
             dom: 'lBfrtip',
             buttons: canExport('masakan', [
                 {
-                    extend: 'pdfHtml5',
-                    exportOptions: {
-                        columns: [0,2,3,4,5]
-                    },
+                    text: 'HTML',
+                    action: function ( e, dt, button, config ) {
+                        window.location = "{{ route('masakan.export') }}?ext=html";
+                    }
                 },
                 {
-                    extend: 'excelHtml5',
-                    exportOptions: {
-                        columns: [0,2,3,4,5]
-                    },
+                    text: 'Excel',
+                    action: function ( e, dt, button, config ) {
+                        window.location = "{{ route('masakan.export') }}";
+                    }
                 },
                 {
-                    extend: 'print',
-                    exportOptions: {
-                        columns: [0,2,3,4,5]
-                    },
+                    text: 'CSV',
+                    action: function ( e, dt, button, config ) {
+                        window.location = "{{ route('masakan.export') }}?ext=csv";
+                    }
                 },
             ]),
             responsive: true,
@@ -51,9 +51,15 @@
             <div class="box box-danger">
                 <div class="box-header with-border">
                     <h3 class="box-title">Masakan</h3>
-                    @can('masakan-add')
-                        <a href="{{ route('masakan.create') }}" class="btn btn-primary btn-show pull-right" data-toggle="tooltip" data-placement="left" title="Tambah Masakan" data-title="Tambah Masakan"><i class="fa fa-plus"></i> Tambah</a>
-                    @endcan
+                    <span class="pull-right">
+                        @can('masakan-import')
+                            <a href="{{ route('masakan.show_import') }}" class="btn btn-primary btn-show" data-title="Import Masakan"><i class="fa fa-plus"> Import</i></a>
+                        @endcan
+
+                        @can('masakan-add')
+                            <a href="{{ route('masakan.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Tambah Masakan" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
+                        @endcan
+                    </span>
                 </div>
                 <div class="box-body">
                     @if (session()->has('success'))

@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Audit;
 use App\Permission;
-use Yajra\DataTables\Facades\DataTables;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Requests\PermissionRequest;
+use Yajra\DataTables\Facades\DataTables;
+use App\Imports\PermissionsImport;
 
 class PermissionController extends Controller
 {
@@ -16,6 +18,8 @@ class PermissionController extends Controller
         $this->middleware('permission:permission-add')->only('create', 'store');
         $this->middleware('permission:permission-edit')->only('edit', 'update');
         $this->middleware('permission:permission-delete')->only('destroy');
+        $this->middleware('permission:permission-export')->only('export');
+        $this->middleware('permission:permission-import')->only('show_import', 'store_import');
     }
 
     /**
@@ -140,5 +144,27 @@ class PermissionController extends Controller
         return DataTables::of($models)
                             ->addIndexColumn()
                             ->make(true);
+    }
+
+    public function show_import()
+    {
+        $url = route('role.store_import');
+
+        return view('import_excel', compact('url'));
+    }
+
+    public function store_import(Request $request)
+    {
+        $request->validate([
+            'excel' => 'required|mimes:xls,xlsx'
+        ]);
+
+        $excel = Excel::import(new PermissionsImport, $request->file('excel')->getRealPath());
+
+        if($excel){
+            return 'Permissions successfully imported.';
+        }
+
+        return "Cant't import Permissions,try again later..";
     }
 }

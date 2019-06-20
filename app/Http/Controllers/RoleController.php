@@ -8,6 +8,9 @@ use App\Permission;
 use Illuminate\Http\Request;
 use App\Http\Requests\RoleRequest;
 use Yajra\DataTables\Facades\DataTables;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\RoleImport;
+use App\Exports\RoleExport;
 
 class RoleController extends Controller
 {
@@ -18,6 +21,8 @@ class RoleController extends Controller
         $this->middleware('permission:role-add')->only('create', 'store');
         $this->middleware('permission:role-edit')->only('edit', 'update');
         $this->middleware('permission:role-delete')->only('destroy');
+        $this->middleware('permission:role-export')->only('export');
+        $this->middleware('permission:role-import')->only('show_import', 'store_import');
     }
 
     /**
@@ -171,5 +176,27 @@ class RoleController extends Controller
         return DataTables::of($models)
                             ->addIndexColumn()
                             ->make(true);
+    }
+
+    public function show_import()
+    {
+        $url = route('role.store_import');
+
+        return view('import_excel', compact('url'));
+    }
+
+    public function store_import(Request $request)
+    {
+        $request->validate([
+            'excel' => 'required|mimes:xls,xlsx'
+        ]);
+
+        $excel = Excel::import(new RoleImport, $request->file('excel')->getRealPath());
+
+        if($excel){
+            return 'Roles successfully imported.';
+        }
+
+        return "Cant't import Roles,try again later..";
     }
 }

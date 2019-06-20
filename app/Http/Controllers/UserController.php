@@ -8,6 +8,10 @@ use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Permission\Models\Role;
 use App\Audit;
+use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\UserExport;
+use App\Imports\UserImport;
 
 class UserController extends Controller
 {
@@ -186,5 +190,45 @@ class UserController extends Controller
         return DataTables::of($models)
                             ->addIndexColumn()
                             ->make(true);
+    }
+
+    public function export(Request $request)
+    {
+        $type = $request->get('ext');
+        if($request->has('ext') &&  $type != ""){
+            $allowed_type = [
+                'xlsx', 'csv', 'html'
+            ];
+
+            if(in_array($type, $allowed_type)) {
+                return Excel::download(new UserExport, 'users.'.$type);
+            } else {
+                return response()->json('error', 422);
+            }
+        }
+
+        return Excel::download(new UserExport, 'users.xlsx');
+    }
+
+    public function show_import()
+    {
+        $url = route('user.store_import');
+
+        return view('import_excel', compact('url'));
+    }
+
+    public function store_import(Request $request)
+    {
+        $request->validate([
+            'excel' => 'required|mimes:xls,xlsx'
+        ]);
+
+        $excel = Excel::import(new UserImport, $request->file('excel')->getRealPath());
+
+        if($excel){
+            return 'User successfully imported.';
+        }
+
+        return "Cant't import User,try again later..";
     }
 }

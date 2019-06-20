@@ -21,15 +21,22 @@ Route::get('/category', 'HomeController@category')->name('category');
 Route::group(['prefix' => 'user_management'], function(){
     // User
     Route::get('/user/getAll', 'UserController@getAll')->name('user.getAll');
+    Route::get('/user/export', 'UserController@export')->name('user.export');
+    Route::get('/user/import', 'UserController@show_import')->name('user.show_import');
+    Route::post('/user/import', 'UserController@store_import')->name('user.store_import');
     Route::resource('/user', 'UserController');
 
     // Role
     Route::post('/role/{id}/give_permissions', 'RoleController@give_permissions')->name('role.give_permissions');
     Route::get('/role/{id}/permissions', 'RoleController@permissions')->name('role.permissions');
     Route::get('/role/getAll', 'RoleController@getAll')->name('role.getAll');
+    Route::get('/role/import', 'RoleController@show_import')->name('role.show_import');
+    Route::post('/role/import', 'RoleController@store_import')->name('role.store_import');
     Route::resource('/role', 'RoleController');
 
     // Permission
+    Route::get('/permission/import', 'PermissionController@show_import')->name('permission.show_import');
+    Route::post('/permission/import', 'PermissionController@store_import')->name('permission.store_import');
     Route::get('/permission/getAll', 'PermissionController@getAll')->name('permission.getAll');
     Route::resource('permission', 'PermissionController');
 });
@@ -45,6 +52,9 @@ Route::delete('/cart/{id}', 'CartController@destroy')->name('cart.destroy');
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Masakan
+Route::get('/masakan/export', 'MasakanController@export')->name('masakan.export');
+Route::get('/masakan/import', 'MasakanController@show_import')->name('masakan.show_import');
+Route::post('/masakan/import', 'MasakanController@store_import')->name('masakan.store_import');
 Route::get('/masakan/chart', 'MasakanController@chart')->name('masakan.chart');
 Route::get('/masakan/getAll', 'MasakanController@getAll')->name('masakan.getAll');
 Route::get('/masakan/search/{key?}', 'MasakanController@search')->name('masakan.search');

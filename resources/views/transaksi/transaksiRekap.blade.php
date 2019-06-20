@@ -30,7 +30,7 @@
         <div class="col-md-12">
             <div class="box box-danger">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Order</h3>
+                    <h3 class="box-title">Transaksi</h3>
                 </div>
                 <div class="box-body">
                     @if (session()->has('success'))

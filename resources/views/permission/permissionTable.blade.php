@@ -26,7 +26,7 @@
                     exportOptions: {
                         columns: [0,1,2,3]
                     },
-                },
+                }
             ]),
             responsive: true,
             processing: true,
@@ -48,10 +48,16 @@
         <div class="col-md-12">
             <div class="box box-danger">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Masakan</h3>
-                    @can('permission-add')
-                        <a href="{{ route('permission.create') }}" class="btn btn-primary btn-show pull-right" data-toggle="tooltip" data-placement="left" title="Tambah Permission" data-title="Tambah Permission"><i class="fa fa-plus"></i> Tambah</a>
-                    @endcan
+                    <h3 class="box-title">Permission</h3>
+                    <span class="pull-right">
+                        @can('permission-import')
+                            <a href="{{ route('permission.show_import') }}" class="btn btn-primary btn-show" data-title="Import Permissions"><i class="fa fa-plus"> Import</i></a>
+                        @endcan
+
+                        @can('permission-add')
+                            <a href="{{ route('permission.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Tambah Permission" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
+                        @endcan
+                    </span>
                 </div>
                 <div class="box-body">
                     @if (session()->has('success'))
