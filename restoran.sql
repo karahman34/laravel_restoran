@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2019 at 03:52 PM
+-- Generation Time: Jun 21, 2019 at 11:42 AM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -83,7 +83,29 @@ INSERT INTO `audits` (`id`, `user_type`, `user_id`, `event`, `auditable_type`, `
 (36, 'App\\User', 1, 'created', 'App\\Permission', 38, '[]', '{\"name\":\"permission-import\",\"guard_name\":\"web\",\"id\":38}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:50:40', '2019-06-20 06:50:40'),
 (37, 'App\\User', 1, 'created', 'App\\Permission', 39, '[]', '{\"name\":\"role-import\",\"guard_name\":\"web\",\"id\":39}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:50:45', '2019-06-20 06:50:45'),
 (38, 'App\\User', 1, 'created', 'App\\Permission', 40, '[]', '{\"name\":\"order-import\",\"guard_name\":\"web\",\"id\":40}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:51:01', '2019-06-20 06:51:01'),
-(39, 'App\\User', 1, 'created', 'App\\Permission', 41, '[]', '{\"name\":\"transaksi-import\",\"guard_name\":\"web\",\"id\":41}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:51:07', '2019-06-20 06:51:07');
+(39, 'App\\User', 1, 'created', 'App\\Permission', 41, '[]', '{\"name\":\"transaksi-import\",\"guard_name\":\"web\",\"id\":41}', 'http://localhost:8000/user_management/permission?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 06:51:07', '2019-06-20 06:51:07'),
+(40, 'App\\User', 1, 'created', 'App\\Masakan', 9, '[]', '{\"nama_masakan\":\"Mie Goreng Special\",\"harga\":\"15000\",\"status_masakan\":\"1\",\"kategori\":\"mie\",\"deskripsi\":\"Mie Goreng special\",\"image\":\"img\\/masakans\\/rLFRE0Kjy2n7BDIdAFiIoNlvD0knFzJnRNezeEZT.jpeg\",\"id\":9}', 'http://localhost:8000/masakan?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 18:19:54', '2019-06-20 18:19:54'),
+(41, 'App\\User', 1, 'created', 'App\\Masakan', 10, '[]', '{\"nama_masakan\":\"Nasi Goreng Rendang\",\"harga\":\"20000\",\"status_masakan\":\"1\",\"kategori\":\"makanan\",\"deskripsi\":\"Nasi goreng yang dibuat dengan sepenuh hati\",\"image\":\"img\\/masakans\\/Ov3EYrs8AoNVj91R8pHtfJ0GMNSTJUBsazW1dacz.jpeg\",\"id\":10}', 'http://localhost:8000/masakan?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 18:20:55', '2019-06-20 18:20:55'),
+(42, 'App\\User', 1, 'created', 'App\\Masakan', 11, '[]', '{\"nama_masakan\":\"Ikan Balado Tongkol\",\"harga\":\"20000\",\"status_masakan\":\"1\",\"kategori\":\"makanan\",\"deskripsi\":\"5pcs ikan balado tongkol\",\"image\":\"img\\/masakans\\/iJFscqoPNslblbUwJkyf9knZQ4sGZE2Xv1X4Kz28.jpeg\",\"id\":11}', 'http://localhost:8000/masakan?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 18:23:11', '2019-06-20 18:23:11'),
+(43, 'App\\User', 1, 'deleted', 'App\\User', 3, '{\"id\":3,\"avatar\":\"img\\/avatars\\/y7CEE2IE4QrAeEVSaBjOXZfwqdQDkmE8xZQmPl4M.jpeg\",\"username\":\"pelanggan1\",\"password\":\"$2y$10$9Qfr2UKEa2xcNN2nD8P4Se10hd2C2XeDogv0WEkuIjYdFZmPg6P1e\",\"nama_user\":\"Pelanggan1\",\"remember_token\":null}', '[]', 'http://localhost:8000/user_management/user/3?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 22:52:19', '2019-06-20 22:52:19'),
+(44, 'App\\User', 1, 'updated', 'App\\User', 1, '{\"remember_token\":\"xDKtGcImFhxgnO80mJUEGHHePQgutrunkUKMcRyUM6PtPXUy4sfndxrGy1kk\"}', '{\"remember_token\":\"gkRbZhAtrhX0RkGA7tpSB8ndZaoRYiPYeBYcpv2SglpOyjHVu3KTUQ2dm6qD\"}', 'http://localhost:8000/logout?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 22:59:34', '2019-06-20 22:59:34'),
+(45, 'App\\User', 1, 'created', 'App\\User', 4, '[]', '{\"nama_user\":\"Pelanggan1\",\"username\":\"pelanggan1\",\"password\":\"$2y$10$ZWB98PZNqSPsjLXjPGVcAOuDz9Dx8xvRTtKlKqLygXPKF4iBWF4nm\",\"avatar\":\"img\\/avatars\\/7eIXqthgNumXz4u1q8pRabNbdbHz1P9zM1gsX5Tx.jpeg\",\"id\":4}', 'http://localhost:8000/user_management/user?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 23:02:30', '2019-06-20 23:02:30'),
+(46, 'App\\User', 4, 'created', 'App\\Order', 4, '[]', '{\"no_meja\":\"5\",\"user_id\":4,\"id\":4}', 'http://localhost:8000/order?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.170', NULL, '2019-06-20 23:04:07', '2019-06-20 23:04:07'),
+(47, 'App\\User', 4, 'created', 'App\\detOrder', 6, '[]', '{\"order_id\":4,\"masakan_id\":10,\"keterangan\":null,\"jumlah\":\"2\",\"id\":6}', 'http://localhost:8000/order?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.170', NULL, '2019-06-20 23:04:08', '2019-06-20 23:04:08'),
+(48, 'App\\User', 4, 'created', 'App\\detOrder', 7, '[]', '{\"order_id\":4,\"masakan_id\":8,\"keterangan\":\"Jangan pedes2 ya mas\",\"jumlah\":\"3\",\"id\":7}', 'http://localhost:8000/order?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.170', NULL, '2019-06-20 23:04:08', '2019-06-20 23:04:08'),
+(50, 'App\\User', 1, 'created', 'App\\User', 5, '[]', '{\"avatar\":\"img\\/avatars\\/4cDy9BwFOptbvyE9ytPAi8CDiluvK96xtRBc0lX9.jpeg\",\"nama_user\":\"Kasir dan waiter\",\"username\":\"user23\",\"password\":\"$2y$10$moTWWF0YOS4Ijl0hsNC7AOspIRFeW2QWQce7mMxK6qHU7XxNovcN6\",\"id\":5}', 'http://localhost:8000/user_management/user/import?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 23:05:14', '2019-06-20 23:05:14'),
+(51, 'App\\User', 5, 'created', 'App\\Transaksi', 4, '[]', '{\"user_id\":5,\"order_id\":\"4\",\"total_bayar\":\"115000\",\"id\":4}', 'http://localhost:8000/transaksi?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.170', NULL, '2019-06-20 23:07:49', '2019-06-20 23:07:49'),
+(52, 'App\\User', 5, 'updated', 'App\\Order', 4, '{\"status_order\":0}', '{\"status_order\":1}', 'http://localhost:8000/transaksi?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.170', NULL, '2019-06-20 23:07:50', '2019-06-20 23:07:50'),
+(53, 'App\\User', 1, 'deleted', 'App\\User', 4, '{\"id\":4,\"avatar\":\"img\\/avatars\\/7eIXqthgNumXz4u1q8pRabNbdbHz1P9zM1gsX5Tx.jpeg\",\"username\":\"pelanggan1\",\"password\":\"$2y$10$ZWB98PZNqSPsjLXjPGVcAOuDz9Dx8xvRTtKlKqLygXPKF4iBWF4nm\",\"nama_user\":\"Pelanggan1\",\"remember_token\":\"l54VwydfZ3eJC4gKNprCQYJkRDqzjOdntIEeX2PlR5MfBATM8PdrJbxeuW8F\"}', '[]', 'http://localhost:8000/user_management/user/4?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 23:11:41', '2019-06-20 23:11:41'),
+(54, 'App\\User', 1, 'updated', 'App\\User', 1, '{\"remember_token\":\"gkRbZhAtrhX0RkGA7tpSB8ndZaoRYiPYeBYcpv2SglpOyjHVu3KTUQ2dm6qD\"}', '{\"remember_token\":\"gUQeZ1DPOURUM8jzNBrQa7i6vTc6mC51UzkyE6tb3hxTI0jOMfGjQWoKqRif\"}', 'http://localhost:8000/logout?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 23:12:14', '2019-06-20 23:12:14'),
+(55, 'App\\User', 1, 'created', 'App\\User', 6, '[]', '{\"nama_user\":\"Pelanggan1\",\"username\":\"pelanggan1\",\"password\":\"$2y$10$4R12D1CTxowMM\\/RHY8B0S.S7nvYfV1ZrW7zTPHR8A0tPgBEwD78xy\",\"avatar\":\"img\\/avatars\\/i4mIt8WtsXCmqaYMlEZjFwoUbvBGu6Nz108Qsb7x.jpeg\",\"id\":6}', 'http://localhost:8000/user_management/user?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 23:15:22', '2019-06-20 23:15:22'),
+(56, 'App\\User', 6, 'created', 'App\\Order', 5, '[]', '{\"no_meja\":\"6\",\"user_id\":6,\"id\":5}', 'http://localhost:8000/order?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.170', NULL, '2019-06-20 23:16:39', '2019-06-20 23:16:39'),
+(57, 'App\\User', 6, 'created', 'App\\detOrder', 8, '[]', '{\"order_id\":5,\"masakan_id\":10,\"keterangan\":null,\"jumlah\":\"2\",\"id\":8}', 'http://localhost:8000/order?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.170', NULL, '2019-06-20 23:16:39', '2019-06-20 23:16:39'),
+(58, 'App\\User', 6, 'created', 'App\\detOrder', 9, '[]', '{\"order_id\":5,\"masakan_id\":8,\"keterangan\":\"Jangan pedes2 ya mba\\/mas\",\"jumlah\":\"3\",\"id\":9}', 'http://localhost:8000/order?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.170', NULL, '2019-06-20 23:16:39', '2019-06-20 23:16:39'),
+(59, 'App\\User', 1, 'created', 'App\\User', 7, '[]', '{\"avatar\":\"img\\/avatars\\/4cDy9BwFOptbvyE9ytPAi8CDiluvK96xtRBc0lX9.jpeg\",\"nama_user\":\"Kasir dan waiter\",\"username\":\"user23\",\"password\":\"$2y$10$6c7Umj7g32RxNxyyfp90j.oWg3o7savswOta\\/vjueC\\/xLl2lulAY.\",\"id\":7}', 'http://localhost:8000/user_management/user/import?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36', NULL, '2019-06-20 23:17:39', '2019-06-20 23:17:39'),
+(60, 'App\\User', 6, 'updated', 'App\\User', 6, '{\"remember_token\":null}', '{\"remember_token\":\"gCEmhKUtx7ZLNJylCKU83bXwFqqPy5Qwh8ynLShp0vKWFpcSzEQYyKXJmxdg\"}', 'http://localhost:8000/logout?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.170', NULL, '2019-06-20 23:18:12', '2019-06-20 23:18:12'),
+(61, 'App\\User', 7, 'created', 'App\\Transaksi', 5, '[]', '{\"user_id\":7,\"order_id\":\"5\",\"total_bayar\":\"115000\",\"id\":5}', 'http://localhost:8000/transaksi?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.170', NULL, '2019-06-20 23:20:08', '2019-06-20 23:20:08'),
+(62, 'App\\User', 7, 'updated', 'App\\Order', 5, '{\"status_order\":0}', '{\"status_order\":1}', 'http://localhost:8000/transaksi?', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.170', NULL, '2019-06-20 23:20:08', '2019-06-20 23:20:08');
 
 -- --------------------------------------------------------
 
@@ -107,11 +129,10 @@ CREATE TABLE `detail_orders` (
 --
 
 INSERT INTO `detail_orders` (`id`, `order_id`, `masakan_id`, `keterangan`, `jumlah`, `status_detail_order`, `created_at`, `updated_at`) VALUES
-(1, 1, 4, NULL, 2, 1, '2019-06-18 15:56:32', '2019-06-18 15:57:54'),
-(2, 1, 1, 'Sausnya yang banyak ya', 1, 1, '2019-06-18 15:56:32', '2019-06-18 15:57:54'),
-(3, 1, 7, NULL, 2, 1, '2019-06-18 15:56:32', '2019-06-18 15:57:54'),
 (4, 2, 8, 'yang cepet ya dah lapar', 2, 1, '2019-06-19 16:44:57', '2019-06-19 16:45:55'),
-(5, 3, 4, NULL, 1, 0, '2019-06-19 19:10:16', '2019-06-19 19:10:16');
+(5, 3, 4, NULL, 1, 0, '2019-06-19 19:10:16', '2019-06-19 19:10:16'),
+(8, 5, 10, NULL, 2, 1, '2019-06-20 23:16:39', '2019-06-20 23:19:34'),
+(9, 5, 8, 'Jangan pedes2 ya mba/mas', 3, 1, '2019-06-20 23:16:39', '2019-06-20 23:19:34');
 
 -- --------------------------------------------------------
 
@@ -143,7 +164,10 @@ INSERT INTO `masakans` (`id`, `image`, `nama_masakan`, `deskripsi`, `kategori`, 
 (5, 'img/masakans/gGZGCmpYcSdyceGjB90NeeolEA9YiiFxXTUhhWRh.jpeg', 'Ayam Goreng', '3 pcs ayam goreng', 'makanan', 4000, 1, '2019-06-19 07:44:40', '2019-06-19 07:44:40'),
 (6, 'img/masakans/RyQ0xmHSLiInnh9oFYzVn52svl2vhfIBFp36RIJE.jpeg', 'Smashburger', 'awd', 'makanan', 45000, 1, '2019-06-19 07:45:54', '2019-06-19 07:45:54'),
 (7, 'img/masakans/JuntT0SFpcMLj0b1HJIBgeRPGNZoqOmZfPHBNxCI.jpeg', 'Cheeseburger', '1 pcs Cheese burger', 'makanan', 20000, 1, '2019-06-19 07:46:37', '2019-06-19 07:46:37'),
-(8, 'img/masakans/kYjzinYjd1q6jjWYkNTaRavTErraDSgaIqLT9BBB.jpeg', 'Ayam Geprek Yogja', '1pcs ayam geprek', 'makanan', 25000, 1, '2019-06-19 07:47:34', '2019-06-19 07:47:34');
+(8, 'img/masakans/kYjzinYjd1q6jjWYkNTaRavTErraDSgaIqLT9BBB.jpeg', 'Ayam Geprek Yogja', '1pcs ayam geprek', 'makanan', 25000, 1, '2019-06-19 07:47:34', '2019-06-19 07:47:34'),
+(9, 'img/masakans/rLFRE0Kjy2n7BDIdAFiIoNlvD0knFzJnRNezeEZT.jpeg', 'Mie Goreng Special', 'Mie Goreng special', 'mie', 15000, 1, '2019-06-20 18:19:53', '2019-06-20 18:19:53'),
+(10, 'img/masakans/Ov3EYrs8AoNVj91R8pHtfJ0GMNSTJUBsazW1dacz.jpeg', 'Nasi Goreng Rendang', 'Nasi goreng yang dibuat dengan sepenuh hati', 'makanan', 20000, 1, '2019-06-20 18:20:55', '2019-06-20 18:20:55'),
+(11, 'img/masakans/iJFscqoPNslblbUwJkyf9knZQ4sGZE2Xv1X4Kz28.jpeg', 'Ikan Balado Tongkol', '5pcs ikan balado tongkol', 'makanan', 20000, 1, '2019-06-20 18:23:11', '2019-06-20 18:23:11');
 
 -- --------------------------------------------------------
 
@@ -202,8 +226,12 @@ CREATE TABLE `model_has_roles` (
 INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (1, 'App\\User', 1),
 (2, 'App\\User', 2),
+(2, 'App\\User', 5),
+(2, 'App\\User', 7),
 (3, 'App\\User', 2),
-(5, 'App\\User', 3);
+(3, 'App\\User', 5),
+(3, 'App\\User', 7),
+(5, 'App\\User', 6);
 
 -- --------------------------------------------------------
 
@@ -225,9 +253,9 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `no_meja`, `user_id`, `status_order`, `created_at`, `updated_at`) VALUES
-(1, '3', 3, 1, '2019-06-18 15:56:32', '2019-06-18 19:20:17'),
 (2, '7', 1, 1, '2019-06-19 16:44:57', '2019-06-19 16:46:26'),
-(3, '7', 1, 1, '2019-06-19 19:10:16', '2019-06-20 00:49:05');
+(3, '7', 1, 1, '2019-06-19 19:10:16', '2019-06-20 00:49:05'),
+(5, '6', 6, 1, '2019-06-20 23:16:39', '2019-06-20 23:20:08');
 
 -- --------------------------------------------------------
 
@@ -384,7 +412,6 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (21, 5),
 (22, 1),
 (22, 2),
-(22, 3),
 (22, 4),
 (23, 1),
 (24, 1),
@@ -449,9 +476,9 @@ CREATE TABLE `transaksis` (
 --
 
 INSERT INTO `transaksis` (`id`, `user_id`, `order_id`, `total_bayar`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 150000, '2019-06-18 19:20:17', '2019-06-18 19:20:17'),
 (2, 1, 2, 50000, '2019-06-19 16:46:26', '2019-06-19 16:46:26'),
-(3, 1, 3, 7500, '2019-06-20 00:49:04', '2019-06-20 00:49:04');
+(3, 1, 3, 7500, '2019-06-20 00:49:04', '2019-06-20 00:49:04'),
+(5, 7, 5, 115000, '2019-06-20 23:20:08', '2019-06-20 23:20:08');
 
 -- --------------------------------------------------------
 
@@ -475,9 +502,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `avatar`, `username`, `password`, `nama_user`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'img/avatars/zero.png', 'admin12', '$2y$10$kraz3x1ws3Ab7jxbwS4LIuC10S25ktCJT3KfmPp2Q5YYpe/ICRVpm', 'Administrator', 'xDKtGcImFhxgnO80mJUEGHHePQgutrunkUKMcRyUM6PtPXUy4sfndxrGy1kk', '2019-06-18 15:23:28', '2019-06-18 15:23:28'),
-(2, 'img/avatars/f9wXTAc39SYvgHVhBQIDJw6ch0Jj6fKbh7cKeLm1.jpeg', 'baru12', '$2y$10$RO6AyxtYjN.r/41mfJ3U/.jR27chvnuVOiVWiwTJL7iVKg1Bw2nfi', 'user pertama', NULL, '2019-06-18 15:40:31', '2019-06-19 16:45:41'),
-(3, 'img/avatars/y7CEE2IE4QrAeEVSaBjOXZfwqdQDkmE8xZQmPl4M.jpeg', 'pelanggan1', '$2y$10$9Qfr2UKEa2xcNN2nD8P4Se10hd2C2XeDogv0WEkuIjYdFZmPg6P1e', 'Pelanggan1', NULL, '2019-06-18 15:41:20', '2019-06-18 15:41:20');
+(1, 'img/avatars/zero.png', 'admin12', '$2y$10$kraz3x1ws3Ab7jxbwS4LIuC10S25ktCJT3KfmPp2Q5YYpe/ICRVpm', 'Administrator', 'gUQeZ1DPOURUM8jzNBrQa7i6vTc6mC51UzkyE6tb3hxTI0jOMfGjQWoKqRif', '2019-06-18 15:23:28', '2019-06-18 15:23:28'),
+(6, 'img/avatars/i4mIt8WtsXCmqaYMlEZjFwoUbvBGu6Nz108Qsb7x.jpeg', 'pelanggan1', '$2y$10$4R12D1CTxowMM/RHY8B0S.S7nvYfV1ZrW7zTPHR8A0tPgBEwD78xy', 'Pelanggan1', 'gCEmhKUtx7ZLNJylCKU83bXwFqqPy5Qwh8ynLShp0vKWFpcSzEQYyKXJmxdg', '2019-06-20 23:15:22', '2019-06-20 23:15:22'),
+(7, 'img/avatars/4cDy9BwFOptbvyE9ytPAi8CDiluvK96xtRBc0lX9.jpeg', 'user23', '$2y$10$6c7Umj7g32RxNxyyfp90j.oWg3o7savswOta/vjueC/xLl2lulAY.', 'Kasir dan waiter', NULL, '2019-06-20 23:17:39', '2019-06-20 23:17:39');
 
 --
 -- Indexes for dumped tables
@@ -580,19 +607,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `audits`
 --
 ALTER TABLE `audits`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `detail_orders`
 --
 ALTER TABLE `detail_orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `masakans`
 --
 ALTER TABLE `masakans`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -604,7 +631,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `permissions`
@@ -622,13 +649,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `transaksis`
 --
 ALTER TABLE `transaksis`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
