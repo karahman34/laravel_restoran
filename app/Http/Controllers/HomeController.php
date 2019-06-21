@@ -36,7 +36,7 @@ class HomeController extends Controller
 
     public function welcome()
     {
-        $models = Masakan::where('status_masakan', '1')->orderBy('id', "DESC")->paginate(6);
+        $models = Masakan::where('status_masakan', '1')->orderBy('id', "DESC")->paginate(8);
         $title = 'Makan enak dan kenyang bersama kami!';
         $orders = Order::join('detail_orders', 'orders.id', 'detail_orders.order_id')
                         ->select('detail_orders.status_detail_order')

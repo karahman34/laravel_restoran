@@ -41,7 +41,6 @@
                                 <span class="badge badge-custom" style="color:white;"><a href="{{ route('masakan.show', $model->id) }}">{{ $model->nama_masakan }}</a></span>
                                 @endif
                             @endforeach
-                            <span class="badge badge-custom" style="color:white;"><a href="#">Adaw</a></span>
                         </div>
 
                         <div class="col-md-6">

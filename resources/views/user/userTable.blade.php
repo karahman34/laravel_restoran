@@ -33,10 +33,10 @@
             serverSide: true,
             ajax: "{{ route('user.getAll') }}",
             columns: [
-                {data: "DT_RowIndex", name: "DT_RowIndex", searchable: false, orderable: false},
-                {data: "avatar", name: "avatar", searchable: false, orderable: false},
-                {data: "nama_user", name: "nama_user"},
-                {data: "username", name: "username"},
+                {data: "DT_RowIndex", name: "DT_RowIndex", searchable: false, orderable: false, width: '1%'},
+                {data: "avatar", name: "avatar", searchable: false, orderable: false, width: '10%'},
+                {data: "nama_user", name: "nama_user", width: '20%'},
+                {data: "username", name: "username", width: '9%'},
                 {data: "roles", name: "roles"},
                 {data: "action", name: "action", searchable: false, orderable: false}
             ]
@@ -52,11 +52,11 @@
                     <h3 class="box-title">User</h3>
                     <span class="pull-right">
                         @can('user-import')
-                            <a href="{{ route('user.show_import') }}" class="btn btn-primary btn-show" data-title="Import User"><i class="fa fa-plus"> Import</i></a>
+                            <a href="{{ route('user.show_import') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Import User" data-title="Import User"><i class="fa fa-plus"> Import</i></a>
                         @endcan
 
                         @can('user-add')
-                            <a href="{{ route('user.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Tambah User" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
+                            <a href="{{ route('user.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="bottom" title="Tambah User" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
                         @endcan
                     </span>
                 </div>

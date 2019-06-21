@@ -149,7 +149,7 @@ class MasakanController extends Controller
         $models = Masakan::whereRaw("lower(nama_masakan) LIKE '%$key%' ")
                             ->where('status_masakan', 1)
                             ->orderBy('id', 'DESC')
-                            ->paginate(6);
+                            ->paginate(8);
 
         return view('_feed', compact('models'));
     }

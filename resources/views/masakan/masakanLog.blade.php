@@ -44,11 +44,6 @@
                     <h3 class="box-title">Masakan Log</h3>
                 </div>
                 <div class="box-body">
-                    @if (session()->has('success'))
-                        <div class="alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                    @endif
                     <table class="table table-responsive table-hover table-bordered table-striped" id="datatable">
                         <thead>
                             <tr>

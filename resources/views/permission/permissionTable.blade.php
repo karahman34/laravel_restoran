@@ -51,11 +51,11 @@
                     <h3 class="box-title">Permission</h3>
                     <span class="pull-right">
                         @can('permission-import')
-                            <a href="{{ route('permission.show_import') }}" class="btn btn-primary btn-show" data-title="Import Permissions"><i class="fa fa-plus"> Import</i></a>
+                            <a href="{{ route('permission.show_import') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Import Permissions" data-title="Import Permissions"><i class="fa fa-plus"> Import</i></a>
                         @endcan
 
                         @can('permission-add')
-                            <a href="{{ route('permission.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Tambah Permission" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
+                            <a href="{{ route('permission.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="bottom" title="Tambah Permission" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
                         @endcan
                     </span>
                 </div>

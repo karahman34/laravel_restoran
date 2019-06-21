@@ -14,12 +14,12 @@
             serverSide: true,
             ajax: "{{ route('transaksi.rekap_dttb') }}",
             columns: [
-                {data: 'DT_RowIndex', name: 'DT_RowIndex', searchable: false, orderable: false},
-                {data: 'order_id', name: 'order_id'},
-                {data: 'user_id', name: 'user_id'},
-                {data: 'user.nama_user', name: 'user.nama_user'},
-                {data: 'total_bayar', name: 'total_bayar'},
-                {data: 'created_at', name: 'created_at'},
+                {data: 'DT_RowIndex', name: 'DT_RowIndex', searchable: false, orderable: false, width: '1%'},
+                {data: 'order_id', name: 'order_id', width: '10%'},
+                {data: 'user_id', name: 'user_id', width: '10%'},
+                {data: 'user.nama_user', name: 'user.nama_user', width: '16%'},
+                {data: 'total_bayar', name: 'total_bayar', width: '16%'},
+                {data: 'created_at', name: 'created_at', width: '16%'},
             ]
         });
     </script>

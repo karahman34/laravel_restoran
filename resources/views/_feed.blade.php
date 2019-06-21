@@ -1,6 +1,6 @@
 <div class="row">
     @foreach ($models as $model)
-    <div class="col-md-4 col-sm-6 col-6">
+    <div class="col-md-3 col-sm-6 col-6">
         <div class="card">
             <img src="{{ asset('storage/'.$model->image) }}" alt="Image" class="card-img-top">
             <div class="card-body">

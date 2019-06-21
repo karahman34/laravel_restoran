@@ -33,7 +33,7 @@
             serverSide: true,
             ajax: "{{ route('role.getAll') }}",
             columns: [
-                {data: 'DT_RowIndex', name: 'DT_RowIndex', searchable: false, orderable: false},
+                {data: 'DT_RowIndex', name: 'DT_RowIndex', searchable: false, orderable: false, width: '1%'},
                 {data: 'name', name: 'name'},
                 {data: 'created_at', name: 'created_at'},
                 {data: 'updated_at', name: 'updated_at'},
@@ -51,11 +51,11 @@
                     <h3 class="box-title">Role</h3>
                     <span class="pull-right">
                         @can('role-import')
-                            <a href="{{ route('role.show_import') }}" class="btn btn-primary btn-show" data-title="Import Roles"><i class="fa fa-plus"> Import</i></a>
+                            <a href="{{ route('role.show_import') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Import Roles" data-title="Import Roles"><i class="fa fa-plus"> Import</i></a>
                         @endcan
 
                         @can('role-add')
-                            <a href="{{ route('role.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Tambah Role" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
+                            <a href="{{ route('role.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="bottom" title="Tambah Role" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
                         @endcan
                     </span>
                 </div>

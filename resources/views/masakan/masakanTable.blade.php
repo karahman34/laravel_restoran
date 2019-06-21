@@ -33,12 +33,12 @@
             serverSide: true,
             ajax: "{{ route('masakan.getAll') }}",
             columns: [
-                {data: 'DT_RowIndex', name: 'DT_RowIndex', searchable: false, orderable: false},
+                {data: 'DT_RowIndex', name: 'DT_RowIndex', searchable: false, orderable: false, width: '1%'},
                 {data: 'image', name: 'image', searchable: false, orderable: false},
                 {data: 'nama_masakan', name: 'nama_masakan'},
-                {data: 'harga', name: 'harga'},
+                {data: 'harga', name: 'harga', width: '7%'},
                 {data: 'kategori', name: 'kategori'},
-                {data: 'status_masakan', name: 'status_masakan'},
+                {data: 'status_masakan', name: 'status_masakan', width: '4%'},
                 {data: 'action', name: 'action', searchable: false, orderable: false}
             ]
         });
@@ -53,11 +53,11 @@
                     <h3 class="box-title">Masakan</h3>
                     <span class="pull-right">
                         @can('masakan-import')
-                            <a href="{{ route('masakan.show_import') }}" class="btn btn-primary btn-show" data-title="Import Masakan"><i class="fa fa-plus"> Import</i></a>
+                            <a href="{{ route('masakan.show_import') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Import Masakan" data-title="Import Masakan"><i class="fa fa-plus"> Import</i></a>
                         @endcan
 
                         @can('masakan-add')
-                            <a href="{{ route('masakan.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="left" title="Tambah Masakan" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
+                            <a href="{{ route('masakan.create') }}" class="btn btn-primary btn-show" data-toggle="tooltip" data-placement="bottom" title="Tambah Masakan" data-title="Tambah Role"><i class="fa fa-plus"></i> Tambah</a>
                         @endcan
                     </span>
                 </div>
