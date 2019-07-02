@@ -30,7 +30,8 @@ class MasakanRequest extends FormRequest
                     'harga' => 'required|integer|min:1',
                     'status_masakan' => 'required|string',
                     'kategori' => 'required|string',
-                    // 'image' => 'required|image|mimes:jpeg,jpg,png|max:4096'
+                    'image' => 'required|image|mimes:jpeg,jpg,png|max:4096',
+                    'deskripsi' => 'required|string'
                 ];
                 break;
             case 'PUT':
@@ -40,7 +41,8 @@ class MasakanRequest extends FormRequest
                         'harga' => 'required|integer|min:1',
                         'status_masakan' => 'required|string',
                         'kategori' => 'required|string',
-                        'image' => 'image|mimes:jpeg,jpg,png|max:4096'
+                        'image' => 'image|mimes:jpeg,jpg,png|max:4096',
+                        'deskripsi' => 'required|string'
                     ];
                     break;
         }
